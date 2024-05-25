@@ -1,4 +1,4 @@
-function isPrime(num: number): boolean {
+function isPrime(num) {
   if (num <= 1) {
       return false;
   }
@@ -13,22 +13,22 @@ function isPrime(num: number): boolean {
 }
 
 function findLargestPrimes() {
-  let userInput: string | null = prompt("Digite um número:");
+  let userInput = prompt("Digite um número:");
   
   if (userInput === null) {
       console.log("Nenhum número foi inserido. Por favor, tente novamente.");
       return;
   }
 
-  let startNum: number = parseInt(userInput);
+  let startNum = parseInt(userInput);
 
   if (isNaN(startNum)) {
       console.log("Entrada inválida. Por favor, digite um número.");
       return;
   }
 
-  let primes: number[] = [];
-  let num: number = startNum;
+  let primes = [];
+  let num = startNum;
 
   while (primes.length < 10) {
       if (isPrime(num)) {
@@ -42,4 +42,3 @@ function findLargestPrimes() {
 }
 
 findLargestPrimes();
-
